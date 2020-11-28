@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $main-font;
+    text-decoration: none;
+}
+button{
+    outline: none;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+.header-section{
+    border: 1px solid #ECECEC;
+    height: 80px;
+    background: $main-color;
+    
+    .fl-container{
+        width: 1200px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        // flex-direction: row;
+        align-items: center;
+        .nav{
+            display: flex;
+        }
+    }
+    .header{
+        flex-direction: row;
+    }
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-right: 281px;
+    .flex-item{
+        display: flex;
+        position: relative;
+        .menu-item{
+            font-family: $main-font;
+            color: $black-color;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            margin-left: 25px;
+            margin-right: 25px;
+            transition: $main-transition;
+            &:hover,
+            &:focus{
+                color: $accent-color;
+            }
+        }
+    }
+    .line1{
+        &::before{
+            content: "";
+            width: 78px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $accent-color;
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            left: 50%;
+            transform: translateX(-50%); 
+        }
+    }
+}
+
+.adr{
+    width: 353px;
+    display: flex;
+    justify-content: space-between;
+    .contact{
+        font-family: $main-font;
+        color: $second-color;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        display: inline-flex;
+        align-items: center;
+        transition: $main-transition;
+        &:hover,
+        &:focus{
+            color:$accent-color;
+        }
+        &:hover .envelope{
+            fill: $accent-color;
+        }
+        &:hover .smartphone{
+            fill: $accent-color;
+        }
+        .envelope{
+            width: 16px;
+            height: 12px;
+            margin-right: 10px;
+            fill: $second-color;
+            transition: $main-transition;
+            // .contact:hover &{
+            //     fill: $accent-color;
+            // }
+            &:hover,
+            &:focus{
+                fill: $accent-color;
+            }
+        }
+        .smartphone{
+            width: 10px;
+            height: 16px;
+            margin-right: 10px;
+            transition: $main-transition;
+            fill: $second-color;
+            // .contact:hover &{
+            //     fill: $accent-color;
+            // }
+            &:hover,
+            &:focus{
+                fill: $accent-color;
+            }
+        }
+    }
+}
